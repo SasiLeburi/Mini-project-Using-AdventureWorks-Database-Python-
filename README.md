@@ -8,6 +8,7 @@ List of libraries:
 
 
 Q1.	What is the regional sales in the best performing country?
+
 Firstly, we need to find the data of sales per country in the Sales.SalesTerritory table, Sales YTD column and define the highest performing country by SQL using ROUND, MAX.
 Secondly, calculate the sales by regions of the highest performing country in SQL using ROUND(),and WHERE.
 Finally, we use the queries into Jupiper Note using pyodbc library and create a DataFrame imported library pandas. We did visualizing the data aided in identifying the best-performing country, which was determined to be the US based on its substantial overall sales by importing library matplotlib and plot bar charts.
@@ -16,12 +17,14 @@ Finally, we use the queries into Jupiper Note using pyodbc library and create a 
 ![image](https://github.com/SasiLeburi/Mini-project-Using-AdventureWorks-Database-Python-/assets/142025947/8757adfc-c462-4904-9117-bd9a10672e31)
 
 Q2.	What is the relationship between annual leave taken and bonus?
+
 We performed an Inner join within this query because we needed data from two different tables had a primary key and foreign key to link. We selected the Human Resources and the Sales Person table to extract the data we needed which was the Vacation Hours taken and the Bonus values
 we used the ORDER BY clause to order these from highest to lowest and so that data could be showcased better for others to see.
 
 ![image](https://github.com/SasiLeburi/Mini-project-Using-AdventureWorks-Database-Python-/assets/142025947/aa6c56a0-ceba-451e-9940-59f507025d29)
 
 Q3.	What is the relationship between Country and Revenue?  
+
 We extracted data from Sales Territory as it included the 2 columns we needed. SalesYTD shows the most recent revenue and CountryRegionCode shows the country with said revenue.
 After selecting these values, We had seen ‘US’ in the Country column had duplicate records.
 We used the GROUP BY clause with the SUM aggregate function to group the US data and put in DESC order to make my visual easily readable.
@@ -36,6 +39,7 @@ We was able to make comparison between current revenue and last year's revenue t
 
 
 Q4.	What is the relationship between sick leave and Job Title? 
+
 CREATE a view. SELECT the tables job title, organisation level and average the sick leave hours table. Find these tables FROM  HumanResources.Employee and alias it as E. To then GROUP BY job title and organisation level.
 We SELECT organisation level and average sick leave hours FROM HumanResources.Employee. We used the WHERE clause and IS NOT NULL to not include the null values in organizationlevel. We then GROUPed it by organization level.
 We SELECT Job title and organization level FROM HumanResources.Employee and aliased it. We used the WHERE clause to identify the table organizationlevel IN only levels 1 and 3. Where we GROUPED BY the job title and organization level and ORDERED BY organization level. 
@@ -51,6 +55,7 @@ We SELECT Job title and organization level FROM HumanResources.Employee and alia
 
 
 Q5.	What is the relationship between store trading duration and revenue?
+
 According to Question5 We found the relationship between Store name trading duration (comparing with 2019 and year that the store opened) with their Annual Revenue.
 So, we approached  a table Sale.Store where we found a View exist with a name [Sales].[vStoreWithDemographics]. We took information of Annual revenue, year_opened, Specialty(Area), SquareFeet.
 We found a relationship between Trade duration, Avg_Revenue, YearOpened. From my findings we understand the overall store trading was done for duration with different store names and calculating the average of Annual Revenue.
@@ -80,6 +85,7 @@ We plotted a bar chart to relate with specific category 3 groups using column Sq
 
 
 Q6.	What is the relationship between the size of the stores, number of employees and revenue? 
+
 Using the system view called ‘[Sales].[vStoreWithDemographics]’ which contains information the store size in square feet, number of employees and the annual revenue. 
 As a group we agreed that we need to visual the links between these variables using the line plot and scatter plot.
 From the system view, we will be getting the store size which is saved as square feet and average of the annual revenue. Finally group it by square feet. This query helps to analyse the relationship between the store size and revenue.
