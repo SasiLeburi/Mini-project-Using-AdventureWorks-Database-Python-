@@ -5,6 +5,8 @@ List of libraries:
 -	Matplotlib
 -	Numpy
 -	Seaborn
+
+
 Q1.	What is the regional sales in the best performing country?
 Firstly, we need to find the data of sales per country in the Sales.SalesTerritory table, Sales YTD column and define the highest performing country by SQL using ROUND, MAX.
 Secondly, calculate the sales by regions of the highest performing country in SQL using ROUND(),and WHERE.
